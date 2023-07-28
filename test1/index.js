@@ -6,6 +6,8 @@
 
 
 function uniqueNames(arr1, arr2) {
-    const uniqueSet = new Set([...arr1, ...arr2]);
-    return Array.from(uniqueSet);
+    const combinedArray = [...arr1, ...arr2];
+    return [...new Set(combinedArray)];
 }
+
+module.exports = uniqueNames;
